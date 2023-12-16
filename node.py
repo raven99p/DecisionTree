@@ -1,3 +1,6 @@
+import numpy as np
+
+
 class Node:
     def __init__(
         self,
@@ -20,3 +23,12 @@ class Node:
 
     def print_attr(self):
         print(vars(self))
+
+    def assign_class(self):
+        # print("ASSING CLASS")
+        if self.is_leaf:
+            all_labels = self.samples["class"].values
+
+            if len(np.unique(all_labels)) == 1:
+                self.class_label = all_labels[0]
+                # print("ASSIGNED CLASS TRUE")
