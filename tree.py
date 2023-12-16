@@ -100,8 +100,3 @@ class DecisionTree:
         if len(np.unique(self.current_node.samples["class"].values)) == 1:
             return False
         return True
-
-    def split_possible(self):
-        if len(np.unique(self.current_node.samples["class"].values)) == 1:
-            return False
-        return True
