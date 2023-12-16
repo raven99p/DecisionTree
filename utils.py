@@ -5,7 +5,7 @@ def find_split_criterion(data, features_list):
     # print("data: ", data)
     # print("features_list: ", features_list)
 
-    max_entropy = 0
+    max_gain = 0
     feature = None
 
     for f in features_list:
@@ -13,12 +13,12 @@ def find_split_criterion(data, features_list):
             data[[f, "class"]].values
         )
 
-        if best_entropy > max_entropy:
-            max_entropy = best_entropy
+        if best_gain > max_gain:
+            max_gain = best_gain
 
         feature = {"name": f, "best_split_point": best_split_point}
 
-    if max_entropy == 0 or best_split_point == 0:
+    if max_gain == 0 or best_split_point == 0:
         return {"name": "end_of_tree", "best_split_point": -1}
 
     return feature

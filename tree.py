@@ -90,7 +90,7 @@ class DecisionTree:
 
                     new_nodes.extend([self.current_node.left, self.current_node.right])
                 new_nodes.pop(0)
-                # self.current_node.print_attr()
+                self.current_node.print_attr()
 
                 # print("\n\nSTACK EDITED", new_nodes, "\n\n")
 
