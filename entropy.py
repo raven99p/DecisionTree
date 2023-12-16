@@ -60,4 +60,4 @@ def contiuous(data):
     best_entropy = sp_entropy[split_index]
     best_gain = gain[split_index]
 
-    return best_split_point, best_entropy, best_gain
+    return (best_split_point, best_entropy, best_gain)
